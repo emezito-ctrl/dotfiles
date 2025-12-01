@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/emerson/.config/backgrounds/darksouls_sif.jpeg' 

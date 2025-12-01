@@ -1,0 +1,14 @@
+//@theme "/home/emerson/.config/rofi/themes/nord-oneline.rasi"
+
+//@theme "/home/emerson/.config/rofi/themes/nord-oneline.rasi"
+
+@theme "/home/emerson/.config/rofi/themes/squared-nord.rasi"
+
+configuration {
+   show-icons: true;
+   drun-icon-theme: "Papirus";
+}
+
+element-icon {
+   size: 2.0em;
+}
