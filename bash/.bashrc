@@ -12,7 +12,7 @@ export TERMINAL=alacritty
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias i3config='nvim ~/.config/i3/config'
+alias i3config='nvim ~/.dotfiles/i3/.config/i3/config'
 alias gh='cd ~; clear'
 alias bye='systemctl poweroff'
 alias shutdown='systemctl poweroff'
