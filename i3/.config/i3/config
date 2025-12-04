@@ -16,9 +16,6 @@ exec --no-startup-id xset s off -dpms
 # Start xrandr with default configuration (1920x1080 and 100Hz)
 exec --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080 --rate 100
 
-# Start dunst / daemon notification
-exec --no-startup-id dunst
-
 # Starts picom as a deamon process
 exec --no-startup-id picom -b
 

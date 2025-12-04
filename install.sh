@@ -22,6 +22,7 @@ packages=(
   npm
   nodejs
   git
+  scrot
 )
 
 echo "🔄 Atualizando sistema..."
