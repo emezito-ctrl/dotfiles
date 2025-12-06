@@ -39,10 +39,30 @@ bindsym Shift+Print exec --no-startup-id sh -c 'scrot -s ~/Pictures/Screenshots/
 
 #Use pactl to adjust volume in PulseAudio.
 #set $refresh_i3status killall -SIGUSR1 i3status
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Set volume 10% higher
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+
+# Set volume 10% lower
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+
+# Toggle between mute and unmute audio
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
+# Toggle between mute and unmute mic
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Skip media with next' button (F6)
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+
+# Skip media with next' button (F5)
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+# Skip media with next' button (F7)
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+
+# Skip media with next' button (F8)
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
