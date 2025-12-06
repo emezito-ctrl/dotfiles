@@ -23,6 +23,7 @@ packages=(
   nodejs
   git
   scrot
+  playerctl
 )
 
 echo "🔄 Atualizando sistema..."
