@@ -21,3 +21,5 @@ alias q='exit'
 
 PS1='\[\e[1m\]\u\[\e[00;31m\]@\[\e[0;1m\]\h\[\e[0m\] \[\e[00;31m\]\w\[\e[0m\] \$ '
 fastfetch
+
+bind "set completion-ignore-case on"
