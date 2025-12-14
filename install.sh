@@ -24,6 +24,8 @@ packages=(
   git
   scrot
   playerctl
+  xclip
+  xorg-xset
 )
 
 echo "🔄 Atualizando sistema..."
