@@ -4,26 +4,29 @@ set $mod Mod1
 # Font size 0 to remove window titles
 font pango:JetBrainsMono Nerd Font 0
 
+# Set script to alternating layouts (splith/splitv) for each new window
+exec_always --no-startup-id ~/.dotfiles/i3/.config/i3/alternating_layouts.py &
+
 # Start XDG autostart .desktop files using dex
 exec --no-startup-id dex --autostart --environment i3
 
 # Use xset to set 200ms delay for key starts repeating and 50 repetitions per second
-exec --no-startup-id xset r rate 200 50
+exec --no-startup-id "sleep 2; xset r rate 200 50"
 
 # Use xset to disable screensaver and display power management signaling (DPMS)
-exec --no-startup-id xset s off -dpms
+exec --no-startup-id "sleep 2; xset s off -dpms"
 
 # Start xrandr with default configuration (1920x1080 and 100Hz)
-exec --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080 --rate 100
+exec --no-startup-id "sleep 2; xrandr --output HDMI-1 --mode 1920x1080 --rate 100"
 
 # Starts picom as a deamon process
 exec --no-startup-id picom -b
 
 # Set screen-saver off
-exec --no-startup-id (sleep 5 && xset s off -dpms noblank)&
+exec --no-startup-id "sleep 2; xset s off -dpms noblank"
 
 # Set mouse acceleration to 0
-exec --no-startup-id (sleep 5 && xset m 00)&
+exec --no-startup-id "sleep 2; xset m 00"
 
 # Add background using feh
 exec --no-startup-id feh --bg-scale ~/.config/backgrounds/hands_of_god.jpg
@@ -178,7 +181,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+r restart
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -204,7 +207,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+Control+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
 
 # Start polybar to display a workspace bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
